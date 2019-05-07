@@ -1,0 +1,2998 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vtorichka</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <!--[if IE]>
+  <link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+  </head>
+  <body>
+    <style type="text/css">
+      body {
+        font-family: RobotoLight, sans-serif;
+      }
+
+    </style>
+    <header class="header">
+      <div class="header__inner header__primary">
+        <div class="header__top">
+          <div class="container">
+            <div class="flex-r no-gutters">
+              <a href="homepage.html" class="logo">
+                <img src="img/logo.svg" class="img-responsive"> </a>
+              <div class="header-top-nav">
+                <ul class="nav">
+                  <li>
+                    <a href="about-page.html">О компании</a>
+                  </li>
+                  <li>
+                    <a href="text-page.html">Для клиента</a>
+                  </li>
+                  <li>
+                    <a href="news-page1.html">Пресс-центр</a>
+                  </li>
+                  <li>
+                    <a href="inviteToTheTeam-page.html">Приглашаем в команду</a>
+                  </li>
+                  <li>
+                    <a href="reviews-page.html">Отзывы</a>
+                  </li>
+                  <li>
+                    <a href="contacts-page.html">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__rSide flex-r">
+                <a href="tel:+73912904488" class="phone">
+                  <span class="phone__top">+7 (391) 290-44-88</span>
+                  <span class="phone__bottom">Звоните нам с 9:00 до 20:00</span>
+                </a>
+                <div id="show-menu"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="btn btn__green" id="show-submenu" data-toggle="collapse" aria-expanded="true" aria-controls="header-submenu" data-target="#header-submenu">Категория недвижимости</div>
+            <div id="header-submenu" class="collapse">
+              <div class="header-bottom-nav nav flex-r upp">
+                <a href="vtorichka.html">Квартиры</a>
+                <a href="novostroiki.html">Новостройки</a>
+                <a href="doma.html">Дома. коттеджи</a>
+                <a href="commerchiskaya.html">Коммерческая недвижимость</a>
+                <a href="arenda.html">Аренда квартир</a>
+              </div>
+            </div>
+            <div class="feedback">
+              <a href="#feedback-popup" class="btn btn__green feedback-btn pp-trigger">
+                <span>Обратная связь</span>
+              </a>
+              <a href="#toSee-popup" class="btn btn__green feedback-btn hidden pp-trigger">
+                <i class="if-phone"></i>
+              </a>
+              <a href="fav-page.html" class="i-control-cart" target="_blank">
+                <div class="i-control-cart__heart">
+                  <i class="if-heart"></i>
+                  <span>2</span>
+                </div>
+                <div class="i-control-cart__text">Избранное</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="controls">
+      <button id="on-top" class="btn btn__orange">
+        <i class="if-caret-up"></i>
+      </button>
+      <div class="popup" id="toSee-popup">
+        <div class="popup__outer">
+          <div class="popup__inner">
+            <div class="popup__title">
+              <h4>Запишитесь на просмотр</h4>
+              <p>Заполните форму и риэлтор свяжется с Вами и уточнит удобное для Вас время и дату.</p>
+            </div>
+            <form method="post">
+              <ul class="fill-in">
+                <li>
+                  <input type="text" name="name" placeholder="Ваше имя" required> </li>
+                <li>
+                  <input type="text" placeholder="Ваш телефон" maxlength="13" required> </li>
+              </ul>
+              <div class="pp">
+                <input type="checkbox" id="toSee-popup__permission" name="popup__permission" class="realCheckbox">
+                <label for="toSee-popup__permission">
+                  <p class="popup__permission"> Я даю согласие на обработку моих
+                    <a href="#" target="_blank">персональных данных</a>
+                  </p>
+                </label>
+              </div>
+              <input class="btn btn__submit btn__green" type="submit" value="Записаться на просмотр"> </form>
+            <a href="#/" class="close-trigger">
+              <i class="if-close"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="review-popup">
+        <div class="popup__outer">
+          <div class="popup__inner">
+            <div class="popup__title">
+              <h4>Оставьте отзыв</h4>
+            </div>
+            <form method="post">
+              <ul class="fill-in">
+                <li>
+                  <input type="text" name="name" placeholder="Ваше ФИО" required> </li>
+                <li>
+                  <input type="email" placeholder="Ваш e-mail" required> </li>
+                <li>
+                  <textarea id="textarea" placeholder="Ваш отзыв" rows="6"></textarea>
+                </li>
+              </ul>
+              <a class="attach-file" href="javascript:void(0)">
+                <label for="review-popupAttach">
+                  <span class="attach-file__icon">
+                    <i class="if-close-light"></i>
+                  </span>
+                  <span class="attach-file__text">Прикрепить файл</span>
+                </label>
+                <input name="review-popupAttach" id="review-popupAttach" type="file"> </a>
+              <div class="pp">
+                <input type="checkbox" id="review-popup__permission" name="popup__permission" class="realCheckbox">
+                <label for="review-popup__permission">
+                  <p class="popup__permission"> Я даю согласие на обработку моих
+                    <a href="#" target="_blank">персональных данных</a>
+                  </p>
+                </label>
+              </div>
+              <input class="btn btn__submit btn__green" type="submit" value="Отправить"> </form>
+            <a href="#/" class="close-trigger">
+              <i class="if-close"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="onMailing-popup">
+        <div class="popup__outer">
+          <div class="popup__inner">
+            <div class="popup__title">
+              <h4>Подписаться на рассылку</h4>
+            </div>
+            <form method="post">
+              <ul class="fill-in">
+                <li>
+                  <input type="text" name="name" placeholder="Ваше Имя" required> </li>
+                <li>
+                  <input type="email" placeholder="Ваша почта" required> </li>
+              </ul>
+              <input class="btn btn__submit btn__green" type="submit" value="Отправить"> </form>
+            <a href="#/" class="close-trigger">
+              <i class="if-close"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="feedback-popup">
+        <div class="popup__outer">
+          <div class="popup__inner">
+            <div class="popup__title">
+              <h4>Оставьте заявку</h4>
+            </div>
+            <form method="post">
+              <ul class="fill-in">
+                <li>
+                  <input type="text" name="name" placeholder="Ваше имя" required> </li>
+                <li>
+                  <input type="text" placeholder="Ваш телефон" maxlength="12" required> </li>
+                <li>
+                  <input type="email" placeholder="Ваша почта" required> </li>
+                <li>
+                  <textarea id="textarea" placeholder="Ваш вопрос"></textarea>
+                </li>
+              </ul>
+              <ul class="choose-block">
+                <li>
+                  <input type="radio" name="client-question" id="arenda" />
+                  <label for="arenda" class="label">Вопрос по аренде</label>
+                </li>
+                <li>
+                  <input type="radio" name="client-question" id="prodazha" />
+                  <label for="prodazha" class="label">Вопрос по продаже/покупке</label>
+                </li>
+                <li>
+                  <input type="radio" name="client-question" id="ipoteka" />
+                  <label for="ipoteka" class="label">Вопрос по ипотеке</label>
+                </li>
+                <li>
+                  <input type="radio" name="client-question" id="yurist" />
+                  <label for="yurist" class="label">Вопрос юристу</label>
+                </li>
+                <li>
+                  <input type="radio" name="client-question" id="busTour" />
+                  <label for="busTour" class="label">Запись на автобусный тур</label>
+                </li>
+              </ul>
+              <div class="pp">
+                <input type="checkbox" id="feedback-popup__permission" name="popup__permission" class="realCheckbox">
+                <label for="feedback-popup__permission">
+                  <p class="popup__permission"> Я даю согласие на обработку моих
+                    <a href="#" target="_blank">персональных данных</a>
+                  </p>
+                </label>
+              </div>
+              <input class="btn btn__submit btn__green" type="submit" value="Отправить"> </form>
+            <a href="#/" class="close-trigger">
+              <i class="if-close"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <!-- BEGIN content -->
+    <!-- 
+	<h1>Vtorichka</h1> -->
+    <section class="filters all-filters">
+      <div class="mobile btn-group">
+        <div class="container">
+          <div class="row no-gutters justify-content-between">
+            <div class="btn btn__gray" id="show-filters" data-toggle="collapse" aria-expanded="true" aria-controls="filter-form" data-target="#filter-form">
+              <i class="if-filter"></i>
+              <span>Фильтры</span>
+            </div>
+            <div class="btn btn__gray" id="show-orders" data-toggle="collapse" aria-expanded="true" aria-controls="order-panel" data-target="#order-panel">
+              <i class="if-sort"></i>
+              <span>Упорядочить</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="filters-form collapse" id="filter-form" data-parent=".filters">
+        <div class="container">
+          <div class="filters-form__mobile-head d-block d-lg-none text-center">
+            <h3>Фильтры</h3>
+            <span class="close-trigger" id="show-filters" data-toggle="collapse" aria-expanded="true" aria-controls="filter-form" data-target="#filter-form">
+              <i class="if-close"></i>
+            </span>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-12 col-lg">
+              <div class="filters-form__top">
+                <div class="row no-gutters align-items-end w-100">
+                  <div class="col-12 col-lg-auto">
+                    <fieldset class="filter filter__rooms">
+                      <label class="filter__title">Комнатность:</label>
+                      <div class="filter__layout flex-r">
+                        <select class="gostinka" multiple="multiple" placeholder="Гостинка">
+                          <option value="gost--gostinka">Гостинка</option>
+                          <option value="gost--obshchezhitie">Секционка</option>
+                          <option value="gost--malosemeika">Общежитие</option>
+                        </select>
+                        <input type="checkbox" class="text-checkbox" name="rooms--1" id="rooms--1" checked>
+                        <label for="rooms--1">1</label>
+                        <input type="checkbox" class="text-checkbox" name="rooms--2" id="rooms-2">
+                        <label for="rooms-2">2</label>
+                        <input type="checkbox" class="text-checkbox" name="rooms--3" id="rooms--3">
+                        <label for="rooms--3">3</label>
+                        <input type="checkbox" class="text-checkbox" name="rooms--4plus" id="rooms--4plus">
+                        <label for="rooms--4plus">4+</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-12 col-lg-auto">
+                    <fieldset class="filter filter__price">
+                      <label class="filter__title">Цена, руб</label>
+                      <div class="filter__layout">
+                        <div class="flex-r flex-r__column">
+                          <div class="flex-r">
+                            <input type="number" id="min-price" min="0" max="10000000" id="input-price">
+                            <input type="number" min="0" max="10000000" step="1000" id="input-price"> </div>
+                          <div id="priceSlider" class="rangeSlider"></div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-12 col-lg-auto">
+                    <fieldset class="filter filter__area">
+                      <label class="filter__title">Площадь, м
+                        <sup>2</sup>
+                      </label>
+                      <div class="filter__layout">
+                        <div class="flex-r flex-r__column">
+                          <div class="flex-r">
+                            <input type="number" id="min-area" min="0" max="500" step="1" id="input-area">
+                            <input type="number" min="0" max="500" step="1" id="input-area"> </div>
+                          <div id="areaSlider" class="rangeSlider"></div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-12 col-lg-auto">
+                    <fieldset class="filter filter__onlyNew">
+                      <div class="filter__layout">
+                        <input type="checkbox" class="realCheckbox" name="only--new" id="only--new" checked>
+                        <label for="only--new">Только новые</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="filters-form__bottom">
+                <div class="row no-gutters">
+                  <div class="col-12 col-lg-auto order-2 order-lg-1">
+                    <div class="additional-options dropdown">
+                      <div class="btn btn__white dropdown__trg">Расширенные параметры</div>
+                      <div class="dropdown__content">
+                        <fieldset class="filters-set">
+                          <label class="filter__title">Этаж</label>
+                          <div class="filter__layout">
+                            <div class="level-filter flex-r">
+                              <div class="flex-r">
+                                <div class="flex-r f-c">
+                                  <input type="number" id="min-level" min="0" max="30" step="1" id="input-level">
+                                  <input type="number" min="0" max="30" step="1" id="input-level">
+                                  <div id="levelSlider" class="rangeSlider"></div>
+                                </div>
+                                <div class="filter">
+                                  <input type="checkbox" class="realCheckbox" name="except--first" id="except--first" checked>
+                                  <label for="except--first">Кроме первого</label>
+                                </div>
+                                <div class="filter">
+                                  <input type="checkbox" class="realCheckbox" name="except--last" id="except--last">
+                                  <label for="except--last">Кроме последнего</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset class="filters-set">
+                          <div class="filter filter--materials option-filter">
+                            <select class="s_select">
+                              <option value="materials--0" selected>Материал стен</option>
+                              <option value="materials--1">1</option>
+                              <option value="materials--2">2</option>
+                              <option value="materials--3">3</option>
+                            </select>
+                            <!-- <div class="option">
+													<div class="option__trigger">Материал стен</div>
+													<ul>
+														<li>option 1</li>
+														<li>option 2</li>
+														<li>option 3</li>
+													</ul>
+												</div> --></div>
+                          <div class="filter filter--placement option-filter">
+                            <select class="s_select">
+                              <option value="placement--0" selected>Планировка</option>
+                              <option value="placement--1">1</option>
+                              <option value="placement--2">2</option>
+                              <option value="placement--3">3</option>
+                            </select>
+                          </div>
+                        </fieldset>
+                        <span class="close-trigger">
+                          <i class="if-close"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg order-1 order-lg-2">
+                    <fieldset class="filters-set">
+                      <div class="filter-layout">
+                        <div class="option-filter">
+                          <div class="big-options dropdown">
+                            <div class="btn btn__white dropdown__trg">Район, улица, жилой комплекс</div>
+                            <div class="dropdown__content">
+                              <div class="choosed-tags">
+                                <span>Железнодорожный</span>
+                                <span>Центральный</span>
+                                <span>Ленина</span>
+                                <div class="remove-trigger">Очистить все</div>
+                              </div>
+                              <div class="search">
+                                <input type="text" placeholder="Поиск" class="search_field"> </div>
+                              <div class="big-options__list">
+                                <ul>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--1" id="pl--1" checked>
+                                    <label for="pl--1">Железнодорожный</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--2" id="pl--2">
+                                    <label for="pl--2">Кировский</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--3" id="pl--3">
+                                    <label for="pl--3">Ленинский</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--4" id="pl--4">
+                                    <label for="pl--4">Октябрьский</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--5" id="pl--5">
+                                    <label for="pl--5">Советский</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--6" id="pl--6" checked>
+                                    <label for="pl--6">Центральный</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--7" id="pl--7">
+                                    <label for="pl--7">Свердловский</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--8" id="pl--8">
+                                    <label for="pl--8">Ленинский</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--9" id="pl--9">
+                                    <label for="pl--9">Октябрьский</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--10" id="pl--10">
+                                    <label for="pl--10">Советский</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--11" id="pl--11" checked>
+                                    <label for="pl--11">Центральный</label>
+                                  </li>
+                                  <li>
+                                    <input type="checkbox" class="realCheckbox" name="pl--12" id="pl--12">
+                                    <label for="pl--12">Свердловский</label>
+                                  </li>
+                                </ul>
+                                <div class="btn btn__dis">Улица из др района</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-auto">
+              <div class="filters-form__total flex-r flex-r__column">
+                <span>Подобрано:
+                  <strong>1248</strong> вариантов квартир.</span>
+                <div class="btn-group">
+                  <div class="btn btn__gray mapSwitcher">
+                    <span>Показать на карте</span>
+                  </div>
+                  <div class="btn btn__green">Найти</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filters-form__tags flex-r d-none d-lg-flex">
+            <strong>Быстрый поиск:</strong>
+            <a href="#" class="is-active">Студии</a>
+            <a href="#">Однакомнатные квартиры</a>
+            <a href="#">Двухкомнатные квартиры</a>
+            <a href="#">Трехкомнатные квартиры</a>
+            <a href="#">Четырехкомнатные квартиры</a>
+            <a href="#">Недорогие квартиры</a>
+            <a href="#" class="d-link">Все подборки</a>
+          </div>
+          <div class="hidden-filters">
+            <fieldset class="filter filter__cost">
+              <label class="filter__title">Стоимость квартиры, руб</label>
+              <div class="filter__layout">
+                <div class="flex-r flex-r__column">
+                  <div class="flex-r">
+                    <input type="number" id="input-cost"> </div>
+                  <div id="costSlider" class="rangeSlider"></div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter filter__downPayment">
+              <label class="filter__title">Первый взнос, руб</label>
+              <div class="filter__layout">
+                <div class="flex-r flex-r__column">
+                  <div class="flex-r">
+                    <input type="number" id="input-downPayment"> </div>
+                  <div id="downPaymentSlider" class="rangeSlider"></div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter filter__creditTerm">
+              <label class="filter__title">Срок кредита, лет</label>
+              <div class="filter__layout">
+                <div class="flex-r flex-r__column">
+                  <div class="flex-r">
+                    <input type="number" id="input-creditTerm"> </div>
+                  <div id="creditTermSlider" class="rangeSlider"></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+      <div class="order-panel collapse" id="order-panel" data-parent=".filters">
+        <div class="container">
+          <div class="row flex-r no-gutters">
+            <span class="order-panel__title">Упорядочить по:</span>
+            <div class="order-panel__content flex-r">
+              <div class="order-panel__btn-group orderers">
+                <div class="btn">Местоположению
+                  <div class="switch"></div>
+                </div>
+                <div class="btn">Дате
+                  <div class="switch"></div>
+                </div>
+                <div class="btn">Цене
+                  <div class="switch"></div>
+                </div>
+                <div class="btn">Количеству комнат
+                  <div class="switch"></div>
+                </div>
+                <div class="btn">Площади
+                  <div class="switch"></div>
+                </div>
+              </div>
+              <div class="order-panel__btn-group layout-switchers">
+                <div class="btn" data-layout="linear">
+                  <i class="if-layout2"></i>
+                </div>
+                <div class="btn active" data-layout="blocky">
+                  <i class="if-layout1"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="filteredContent">
+      <div class="container">
+        <div class="items-layout blocky">
+          <div class="row justify-content-md-between justify-content-center">
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="doma.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/1.jpg">
+                    <img src="img/items/8.png">
+                    <img src="img/items/9.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <div class="i-control i-control__red">-100 000 Р</div>
+                    <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                  </div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- begin item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+            <div class="col-12 col-md-6 col-lg-auto">
+              <a href="houseCard-page.html" class="item">
+                <div class="item__top">
+                  <div class="slider">
+                    <img src="img/items/7.png">
+                    <img src="img/items/8.png">
+                    <img src="img/items/19.png">
+                    <img src="img/items/7.png">
+                    <div>
+                      <img src="img/items/8.png">
+                      <div class="item__last">
+                        <i class="if-photo"></i>
+                        <p>Еще
+                          <span>7</span> фото</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item__controls">
+                    <div class="i-control-cart">
+                      <i class="if-heart"></i>
+                    </div>
+                    <div class="i-control-alert">
+                      <span>Добавлено в избранное</span>
+                      <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                    </div>
+                    <!-- 	<div class="item__last">
+										<i class="if-photo"></i>
+										<p>Еще <span>7</span> фото</p>
+									</div> -->
+                    <!--<div class="i-control i-control__red">-100 000 Р</div>-->
+                    <!--<div class="i-control i-control__gray">Продано 2 дня назад</div>--></div>
+                </div>
+                <div class="item__details">
+                  <div class="item__d-row f-row">
+                    <span class="item__price">3 600 000 руб.</span>
+                    <span class="item__price2 light">62 280 руб/м
+                      <sup>2</sup>
+                    </span>
+                  </div>
+                  <div class="item__d-row s-row">
+                    <span class="item__r-count">3-комн.</span>
+                    <span class="item__yardage">55 м
+                      <sup>2</sup>
+                    </span>
+                    <div class="item__level">9 эт.
+                      <span class="light">из 16</span>
+                    </div>
+                  </div>
+                  <div class="item__d-row th-row">
+                    <span class="item__location">Березовский, Строителей. д12</span>
+                    <span class="item__spp light">СПП: 10 000</span>
+                  </div>
+                  <div class="item__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- end item -->
+          </div>
+          <div class="btn btn__more">Загрузить еще</div>
+          <div class="paginator">
+            <div class="paginator__outer">
+              <ul class="paginator__inner">
+                <li class="active">
+                  <a href="#">1</a>
+                </li>
+                <li>
+                  <a href="#">2</a>
+                </li>
+                <li>
+                  <a href="#">3</a>
+                </li>
+                <li>
+                  <a href="#">4</a>
+                </li>
+                <li>
+                  <a href="#">5</a>
+                </li>
+                <li class="j-li">
+                  <a href="#">...</a>
+                </li>
+                <li>
+                  <a href="#">28</a>
+                </li>
+              </ul>
+              <div class="paginator__controls">
+                <a href="#" class="paginator__prev">
+                  <i class="if-caret-up"></i>
+                </a>
+                <a href="#" class="paginator__next">
+                  <i class="if-caret-down"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map">
+          <div class="map__content">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A019bef1d8740ec225b40c5cebd645cf90cb679be6ff8a6affd010b2b3a30435e&amp;source=constructor" width="1280" height="720" frameborder="0"></iframe>
+          </div>
+          <div class="map__sidebar">
+            <div class="map__results">Выделено:
+              <strong>128</strong> объектов</div>
+            <div class="items-layout sidebar">
+              <div class="row justify-content-between">
+                <!-- begin item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+                <div class="col-12 col-sm-6 col-lg-auto w-100">
+                  <div class="item">
+                    <div class="item__top">
+                      <div class="slider">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png">
+                        <img src="img/items/9.png">
+                        <img src="img/items/7.png">
+                        <img src="img/items/8.png"> </div>
+                      <div class="item__controls">
+                        <div class="i-control-cart">
+                          <i class="if-heart"></i>
+                        </div>
+                        <div class="i-control-alert">
+                          <span>Добавлено в избранное</span>
+                          <div class="btn btn__orange" data-href="fav-page.html" data-target="_blank">Посмотреть список</div>
+                        </div>
+                        <div class="i-control i-control__red">-100 000 Р</div>
+                        <div class="i-control i-control__gray">Продано 2 дня назад</div>
+                      </div>
+                    </div>
+                    <a href="#" class="item__details">
+                      <div class="item__d-row f-row">
+                        <span class="item__price">3 600 000 руб.</span>
+                        <span class="item__price2 light">62 280 руб/м
+                          <sup>2</sup>
+                        </span>
+                      </div>
+                      <div class="item__d-row s-row">
+                        <span class="item__r-count">3-комн.</span>
+                        <span class="item__yardage">55 м
+                          <sup>2</sup>
+                        </span>
+                        <div class="item__level">9 эт.
+                          <span class="light">из 16</span>
+                        </div>
+                      </div>
+                      <div class="item__d-row th-row">
+                        <span class="item__location">Березовский, Строителей. д12</span>
+                        <span class="item__spp light">СПП: 10 000</span>
+                      </div>
+                      <div class="item__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coansequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- end item -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="filteredContent__text-block">
+        <div class="container">
+          <h3>Выберите квартиру на вторичном рынке</h3>
+          <p>Заключительный сео текст. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+            ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem. Sequi nesciunt.
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam. eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="js/rangeFilters.js"></script>
+    <!-- 
+	<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A019bef1d8740ec225b40c5cebd645cf90cb679be6ff8a6affd010b2b3a30435e&amp;source=constructor" width="1280" height="720" frameborder="0"></iframe> -->
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-auto">
+              <div class="footer__fb">
+                <div class="footer-contacts">
+                  <div class="footer-contacts__head">Наши контакты</div>
+                  <ul>
+                    <li>г. Красноярск, ул. Взлетная, 59, БЦ “Титан”, 6 этаж</li>
+                    <li>Единый телефон недвижимости: +7 (391) 290-44-88</li>
+                    <li>E-mail:
+                      <a href="mailto:info@arevera.ru">info@arevera.ru</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__copyright-before d-lg-block d-none">Все права защищены. При использовании
+                  <br> материалов сайта обязательна гиперссылка.</div>
+              </div>
+            </div>
+            <div class="col-auto col-lg">
+              <div class="f-list-group">
+                <div class="f-list-group__head">В Красноярске</div>
+                <ul>
+                  <li>
+                    <a href="#">В новостройке</a>
+                  </li>
+                  <li>
+                    <a href="#">Студии</a>
+                  </li>
+                  <li>
+                    <a href="#">Однокомнатные</a>
+                  </li>
+                  <li>
+                    <a href="#">Двухкомнатные</a>
+                  </li>
+                  <li>
+                    <a href="#">Трехкомнатные</a>
+                  </li>
+                  <li>
+                    <a href="#">Четырехкомнатные</a>
+                  </li>
+                </ul>
+                <a href="#" class="f-list-group__mnu-link">Все разделы</a>
+              </div>
+            </div>
+            <div class="col-auto col-lg">
+              <div class="f-list-group">
+                <div class="f-list-group__head">Районы</div>
+                <ul>
+                  <li>
+                    <a href="#">Водники</a>
+                  </li>
+                  <li>
+                    <a href="#">Железнодорожный</a>
+                  </li>
+                  <li>
+                    <a href="#">Кировский</a>
+                  </li>
+                  <li>
+                    <a href="#">Лененский</a>
+                  </li>
+                  <li>
+                    <a href="#">Октябрьский</a>
+                  </li>
+                  <li>
+                    <a href="#">Свердловский</a>
+                  </li>
+                </ul>
+                <a href="#" class="f-list-group__mnu-link">Все разделы</a>
+              </div>
+            </div>
+            <div class="col-auto col-lg">
+              <div class="f-list-group">
+                <div class="f-list-group__head">Улицы</div>
+                <ul>
+                  <li>
+                    <a href="#">Шахтеров</a>
+                  </li>
+                  <li>
+                    <a href="#">Шевченко</a>
+                  </li>
+                  <li>
+                    <a href="#">Республики</a>
+                  </li>
+                  <li>
+                    <a href="#">Сергея Лазо</a>
+                  </li>
+                  <li>
+                    <a href="#">Тельмана</a>
+                  </li>
+                  <li>
+                    <a href="#">Мира</a>
+                  </li>
+                </ul>
+                <a href="#" class="f-list-group__mnu-link">Все разделы</a>
+              </div>
+            </div>
+            <div class="col-12 d-lg-none d-block">
+              <div class="footer__copyright-before2">Все права защищены. При использовании
+                <br> материалов сайта обязательна гиперссылка.</div>
+            </div>
+            <div class="col-12 col-lg-auto">
+              <div class="footer__outer">
+                <div class="footer__inner">
+                  <div class="footer__add-column">
+                    <div class="links">
+                      <a href="#">Пользовательское соглашение</a>
+                      <a href="#">Политика кнофиденциальности</a>
+                    </div>
+                    <div class="footer__socials">
+                      <a href="#" class="footer__social-link">
+                        <i class="if-vk"></i>
+                      </a>
+                      <a href="#" class="footer__social-link">
+                        <i class="if-facebook"></i>
+                      </a>
+                      <a href="#" class="footer__social-link">
+                        <i class="if-insta"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=package.full"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

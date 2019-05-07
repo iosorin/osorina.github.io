@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Index page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<style>
+	body {
+		font-family: Monospace;
+		background-color: #f4f4f4;
+		color: #222;
+		margin: 0px;
+		overflow: hidden;
+	}
+	.fs-container {
+		width: 300px;
+		height: 300px;
+		margin: auto;
+		bottom: 20px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#canvas-output {
+		width: 300px;
+		height: 300px;
+	}
+
+</style>
+</head>
+
+<body>
+	<script src="libs/tween.min.js"></script>
+	<script src="libs/three.min.js"></script>
+	<script src="libs/BinaryLoader.js"></script>
+	<script src="libs/OrbitControls_V2.min.js"></script>
+	<script src="libs/stats.min.js"></script>
+	<script src="libs/dat.gui.js"></script>
+	<script src="libs/pixi.dev.js"></script>
+
+	<div class="fs-container">
+		<div id="canvas-output" style="float:left">
+		</div>
+	</div>
+
+	<output id="list"></output>
+	<script src="js/cup_main.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "name": "napkin-dispenser-designer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --allow-unclean",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "canvas-toBlob": "^1.0.0",
+    "fabric": "^2.3.6",
+    "file-saver": "^1.3.8",
+    "vue": "^2.5.17",
+    "vue-color": "^2.6.0",
+    "vuedraggable": "^2.16.0",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "push-dir": "^0.4.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

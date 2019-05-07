@@ -1,0 +1,490 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Index page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Lobster|Open+Sans|Oswald|Playfair+Display|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <section class="hero section">
+      <div class="container is-fluid">
+        <div class="tile is-ancestor ">
+          <div class="tile is-6 is-vertical is-parent left-side">
+            <div class="tile is-child box options-box">
+              <div class="tabs is-toggle is-fullwidth">
+                <ul>
+                  <li class="is-active" data-tab="text">
+                    <a>
+                      <span>Текст</span>
+                    </a>
+                  </li>
+                  <li data-tab="geometry">
+                    <a>
+                      <span>Геометрия</span>
+                    </a>
+                  </li>
+                  <li data-tab="image">
+                    <a>
+                      <span>Картинка</span>
+                    </a>
+                  </li>
+                  <li data-tab="background">
+                    <a>
+                      <span>Бэкграунд</span>
+                    </a>
+                  </li>
+                  <li data-tab="pattern">
+                    <a>
+                      <span>Паттерн</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <form class="h100">
+                <div id="text" class="tab-content current-tab text-tab is-inactive">
+                  <div class="columns">
+                    <div class="column">
+                      <div class="field">
+                        <label class="label">Шрифт</label>
+                        <div class="control">
+                          <div class="dropdown ">
+                            <div class="dropdown-trigger">
+                              <button class="button" aria-haspopup="true" aria-controls="fonts-dd">
+                                <span class="dropdown-choice">Oswald</span>
+                                <span class="icon is-small">
+                                  <i class="material-icons">arrow_drop_down</i>
+                                </span>
+                              </button>
+                            </div>
+                            <div class="dropdown-menu" id="fonts-dd" role="menu">
+                              <div class="dropdown-content">
+                                <div class="dropdown-item" style="font-family:'Roboto'">Roboto</div>
+                                <div class="dropdown-item" style="font-family:'Oswald'">Oswald</div>
+                                <div class="dropdown-item" style="font-family:'Playfair Display'">Playfair Display</div>
+                                <div class="dropdown-item" style="font-family:'Lobster'">Lobster</div>
+                                <div class="dropdown-item" style="font-family:'Amatic SC'">Amatic SC</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field colors text-colors">
+                        <label class="label">Цвет</label>
+                        <div class="control">
+                          <div class="colors-wrap">
+                            <div class="colors-single" data-color="#ED120F"></div>
+                            <div class="colors-single" data-color="#E98860"></div>
+                            <div class="colors-single" data-color="#FFEE58"></div>
+                            <div class="colors-single" data-color="#00E676"></div>
+                            <div class="colors-single" data-color="#1E88E5"></div>
+                            <div class="colors-single" data-color="#111111"></div>
+                            <div class="colors-single" data-color="#FFFFFF"></div>
+                            <div class="colors-single add-color">
+                              <label>
+                                <input type="color" value="#8080FF">
+                                <div class="circle"></div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="control colors-input">
+                            <input class="input is-rounded commonInput" type="text" placeholder="#ED120F" value="#111111" data-target='fill'>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <label class="label">Размер Шрифта</label>
+                        <div class="control">
+                          <div class="range-slider">
+                            <input class="range-slider-range commonInput" type="range" value="20" min="10" max="100" step="1" data-target='fontSize'>
+                            <span class="range-slider-value">0</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <label class="label">Интервал</label>
+                        <div class="control">
+                          <div class="range-slider">
+                            <input class="range-slider-range commonInput" type="range" min="0.5" value="1" max="3.5" step="0.1" data-target='lineHeight'>
+                            <span class="range-slider-value">0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="field colors background">
+                        <label class="label">Фон</label>
+                        <div class="control">
+                          <div class="colors-wrap">
+                            <div class="colors-single" data-color="#1fbc9c"></div>
+                            <div class="colors-single" data-color="#1c9f85"></div>
+                            <div class="colors-single" data-color="#2ecc70"></div>
+                            <div class="colors-single" data-color="#27af5f"></div>
+                            <div class="colors-single" data-color="#3398db"></div>
+                            <div class="colors-single" data-color="#2980b9"></div>
+                            <div class="colors-single" data-color="#a363bf"></div>
+                            <div class="colors-single" data-color="#8e43ac"></div>
+                            <div class="colors-single" data-color="#3d556e"></div>
+                            <div class="colors-single" data-color="#212f3d"></div>
+                            <div class="colors-single" data-color="#f2c510"></div>
+                            <div class="colors-single" data-color="#f39c19"></div>
+                            <div class="colors-single" data-color="#e84a3c"></div>
+                            <div class="colors-single" data-color="#c0382b"></div>
+                            <div class="colors-single" data-color="#dde6e8"></div>
+                            <div class="colors-single" data-color="#eeeeee"></div>
+                            <div class="colors-single add-color">
+                              <label>
+                                <input type="color" value="#8080FF">
+                                <div class="circle"></div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="control colors-input">
+                            <input class="input is-rounded commonInput" type="text" placeholder="#8080FF" value="#8080FF" data-target='backgroundColor'>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field text-align">
+                        <label class="label">Стиль</label>
+                        <div class="control">
+                          <div class="d-flex">
+                            <div class="btn-group text-align-bgr">
+                              <div class="button is-medium" data-align="left">
+                                <span class="icon">
+                                  <i class="material-icons">format_align_left</i>
+                                </span>
+                              </div>
+                              <div class="button is-medium" data-align="center">
+                                <span class="icon">
+                                  <i class="material-icons">format_align_center</i>
+                                </span>
+                              </div>
+                              <div class="button is-medium" data-align="right">
+                                <span class="icon">
+                                  <i class="material-icons">format_align_right</i>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="btn-group text-style">
+                              <div class="button is-medium" id="bold">
+                                <span class="icon">
+                                  <i class="material-icons">format_bold</i>
+                                </span>
+                              </div>
+                              <div class="button is-medium" id="italic">
+                                <span class="icon">
+                                  <i class="material-icons">format_italic</i>
+                                </span>
+                              </div>
+                              <div class="button is-medium" id="underline">
+                                <span class="icon">
+                                  <i class="material-icons">format_underlined</i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex add-text-outer">
+                            <div class="button" id="add-text">
+                              <i class="material-icons">add</i>
+                            </div>
+                            <div class="button action-remove" id="remove-text" style="margin-left: 10px">
+                              <i class="material-icons">remove</i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 
+
+
+
+<div class="h100">
+
+	<div class="field">
+		<label class="label">Message</label>
+		<div class="control">
+			<textarea class="textarea" placeholder="Textarea"></textarea>
+		</div>
+	</div>
+
+	<div class="field is-grouped">
+		<div class="control">
+			<button class="button is-link">Submit</button>
+		</div>
+		<div class="control">
+			<button class="button is-text">Cancel</button>
+		</div>
+	</div>
+</div> -->
+                </div>
+                <div id="geometry" class="tab-content geometry-tab">
+                  <div class="columns">
+                    <div class="column">
+                      <div class="box" id="add-face">
+                        <i class="material-icons"> face </i>
+                      </div>
+                      <div class="box" id="add-triangle">
+                        <i class="material-icons"> details </i>
+                      </div>
+                      <div class="box" id="add-round">
+                        <i class="material-icons"> panorama_fish_eye </i>
+                      </div>
+                      <div class="box" id="add-square">
+                        <i class="material-icons"> crop_din </i>
+                      </div>
+                      <div class="box" id="add-heart">
+                        <i class="material-icons"> favorite_border </i>
+                      </div>
+                      <div class="box" id="add-line">
+                        <i class="material-icons"> remove </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="image" class="tab-content image-tab">
+                  <div class="columns choose-media">
+                    <div class="box" style="background-image: url(img/images/image1.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image2.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image3.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image4.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image5.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image6.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image7.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image8.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image9.png);"></div>
+                    <div class="box" style="background-image: url(img/images/image10.png);"></div>
+                    <div class="box box-gray">
+                      <div class="box-title"> Создать логотип </div>
+                      <div class="box-hover">
+                        <a href="https://logo.squarespace.com/" target="_blank" style="background-image: url(img/kaplya-logo.png);">
+                          <div>Бесплатно создайте свое<br> лого и загрузите его к нам</div>
+                          <i class="material-icons"> arrow_forward_ios </i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box box-upload box-gray">
+                      <label for="image-upload"></label>
+                      <input type="file" id="image-upload" class="upload-media" data-target="image">
+                      <div class="box-upload_inner">
+                        <i class="material-icons"> add </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="background" class="tab-content background-tab">
+                  <div class="columns choose-media">
+                    <div class="box" style="background-image: url(img/covers/decal15.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal3.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal4.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal16.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal1.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal18.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal5.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal6.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal33.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal20.jpg);"></div>
+                    <div class="box" style="background-image: url(img/covers/decal35.jpg);"></div>
+                    <div class="box box-upload box-gray upload-background">
+                      <label for="background-upload"></label>
+                      <input type="file" id="background-upload" class="upload-media" data-target="background">
+                      <div class="box-upload_inner">
+                        <i class="material-icons"> add </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="pattern" class="tab-content pattern-tab">
+                  <div class="columns choose-media">
+                    <div class="box" style="background-image: url(img/pattern/1.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/2.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/3.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/4.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/5.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/6.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/7.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/8.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/9.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/10.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/11.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/12.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/13.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/14.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/15.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/16.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/17.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/18.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/19.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/20.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/21.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/22.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/23.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/24.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/25.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/26.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/27.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/28.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/29.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/30.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/31.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/32.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/33.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/34.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/35.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/36.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/37.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/38.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/39.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/40.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/41.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/42.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/43.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/44.png);"></div>
+                    <div class="box" style="background-image: url(img/pattern/45.png);"></div>
+                    <div class="box box-upload box-gray upload-pattern">
+                      <label for="pattern-upload"></label>
+                      <input type="file" id="pattern-upload" name="pattern-upload" class="upload-media" data-target="pattern">
+                      <div class="box-upload_inner">
+                        <i class="material-icons"> add </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div id="info" class="tab-content">Инфо</div> -->
+              </form>
+            </div>
+            <div class="tile is-child box rel">
+              <div class="action-container">
+                <canvas id="action"></canvas>
+                <div class="expand-options action-buttons">
+                  <div class="expand-options-trigger">
+                    <div class="button is-rounded">
+                      <i class="material-icons"> more_vert </i>
+                    </div>
+                  </div>
+                  <div class="expand-options-inner">
+                    <div class="button is-rounded is-dark" id="clear-button" title="Очистить Все">
+                      <i class="material-icons"> clear </i>
+                    </div>
+                    <div class="button is-rounded is-dark" id="undo-button" title="Отменить">
+                      <i class="material-icons"> arrow_back_ios </i>
+                    </div>
+                    <div class="button is-rounded is-dark" id="redo-button" title="Вернуть">
+                      <i class="material-icons"> arrow_forward_ios </i>
+                    </div>
+                    <div class="button is-rounded is-dark is-disabled" id="top-button" title="Слой Наверх">
+                      <i class="material-icons"> vertical_align_top </i>
+                    </div>
+                    <div class="button is-rounded is-dark is-disabled" id="down-button" title="Слой Вниз">
+                      <i class="material-icons"> vertical_align_bottom </i>
+                    </div>
+                    <div class="button is-rounded is-dark is-disabled" id="clear-background" title="Очистить Фон">
+                      <i class="material-icons"> cancel_presentation </i>
+                    </div>
+                    <a href="" class="button is-rounded is-dark is-hover" download="myDesign.png" id="save-image" title="Скачать">
+                      <i class="material-icons"> cloud_download </i>
+                    </a>
+                  </div>
+                </div>
+                <div class="action-editor">
+                  <div class="action-editor-inner">
+                    <div class="column fd-columns">
+                      <div class="w100 d-flex">
+                        <div class="field colors geometry-colors rect-bg">
+                          <label class="label">Фон</label>
+                          <div class="control">
+                            <div class="colors-wrap">
+                              <div class="colors-single add-color">
+                                <label>
+                                  <input type="color" value="#8080c0" data-target="fill" class="input commonInput">
+                                  <div class="circle bla1"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field colors geometry-colors border-field">
+                          <label class="label">Граница</label>
+                          <div class="control">
+                            <div class="colors-wrap">
+                              <div class="colors-single add-color">
+                                <label>
+                                  <input type="color" value="#8080c0" data-target="stroke" class="input commonInput">
+                                  <div class="circle bla2"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w100">
+                        <label class="label">Прозрачность</label>
+                        <div class="control">
+                          <div class="range-slider">
+                            <input class="range-slider-range commonInput" type="range" value="1" min="0" max="1" step="0.1" data-target="opacity">
+                            <span class="range-slider-value">0</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w100 border-width-field">
+                        <label class="label">Толщина</label>
+                        <div class="control">
+                          <div class="range-slider">
+                            <input class="range-slider-range commonInput numInput" type="range" value="8" min="0" max="50" step="1" data-target="strokeWidth">
+                            <span class="range-slider-value">0</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w100">
+                        <div class="control">
+                          <div class="button is-dark action-remove">Удалить</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-editor-close">
+                      <i class="material-icons"> clear </i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child box rel">
+              <div class="view-container"></div>
+              <div class="view-options expand-options">
+                <div class="expand-options-trigger">
+                  <div class="button is-rounded">
+                    <i class="material-icons"> more_vert </i>
+                  </div>
+                </div>
+                <div class="expand-options-inner">
+                  <div class="button is-rounded is-hover" id="rotate-object">
+                    <i class="material-icons"> rotate_right </i>
+                  </div>
+                  <div class="button is-rounded is-hover" id="fullscreen">
+                    <i class="material-icons"> aspect_ratio </i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /container -->
+    </section>
+    <!-- <canvas id="canvas" width="600" height="600"></canvas> -->
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>
