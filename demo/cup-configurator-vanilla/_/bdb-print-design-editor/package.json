@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "fabric": "^2.6.0",
-    "three": "^0.69.0",
+    "three": "^0.125.0",
     "three-js": "^79.0.0",
     "three-orbit-controls": "^69.0.5",
     "vue": "^2.5.17",
