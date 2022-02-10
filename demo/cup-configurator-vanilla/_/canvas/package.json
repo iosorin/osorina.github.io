@@ -24,7 +24,7 @@
     "http-proxy-middleware": "^0.17.4",
     "install": "^0.10.1",
     "net": "^1.0.2",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "normalize": "^0.3.1",
     "npm": "^5.5.1",
     "numeric": "^1.2.6",
